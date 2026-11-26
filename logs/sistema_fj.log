@@ -1,0 +1,82 @@
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #1 | Cliente registrado: [CLI-01] Laura Méndez (Particular) - laura.mendez@correo.com | Tel: 3104567890
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #1 | Finalizó intento de registro de cliente.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 1: Registro de cliente válido (particular)
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #2 | Cliente registrado: [CLI-02] Techandes Sas (Corporativo) - contacto@techandes.co | Tel: 6076543210
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #2 | Finalizó intento de registro de cliente.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 2: Registro de cliente válido (corporativo)
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 3: Intento de registro de cliente inválido (correo sin @/dominio)
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #3 | Servicio registrado: [SRV-SALA-1] Sala Ejecutiva A | Tarifa base: $80,000.00 | Disponible
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #3 | Finalizó intento de registro de servicio.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #4 | Servicio registrado: [SRV-EQ-1] Estación Workstation i7 | Tarifa base: $45,000.00 | Disponible
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #4 | Finalizó intento de registro de servicio.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #5 | Servicio registrado: [SRV-ASE-1] Arquitectura Cloud | Tarifa base: $120,000.00 | Disponible
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #5 | Finalizó intento de registro de servicio.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #6 | Servicio registrado: [SRV-SALA-2] Auditorio Principal | Tarifa base: $150,000.00 | No disponible
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #6 | Finalizó intento de registro de servicio.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 4: Creación correcta de servicios especializados
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 5: Creación incorrecta de servicio (tarifa inválida)
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 6: Polimorfismo y métodos sobrecargados de costo
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #7 | Reserva creada: [RES-01] Estado: PENDIENTE | Cliente: Laura Méndez (CLI-01) | Servicio: Sala Ejecutiva A | Duración: 4.0 | Costo: $361,760.00
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #7 | Finalizó intento de creación de reserva.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #8 | Reserva RES-01 procesada con éxito | Cliente: Laura Méndez | Servicio: Sala Ejecutiva A | Total: $361,760.00
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #8 | Finalizó procesamiento de reserva 'RES-01'.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 7: Reserva exitosa confirmada y procesada
+2026-11-24 20:11:26 | ERROR    | SoftwareFJ | Op #9 | Fallo al crear reserva: El servicio 'Auditorio Principal' [SRV-SALA-2] no está disponible para nuevas reservas. | {'id_reserva': 'RES-02', 'servicio_id': 'SRV-SALA-2'}
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #9 | Finalizó intento de creación de reserva.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 8: Reserva fallida (servicio no disponible)
+2026-11-24 20:11:26 | ERROR    | SoftwareFJ | Op #10 | Fallo al crear reserva: La duración de la reserva debe ser un número positivo mayor que cero. | {'duracion': 0}
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #10 | Finalizó intento de creación de reserva.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 9: Reserva fallida (duración inválida)
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #11 | Reserva creada: [RES-04] Estado: PENDIENTE | Cliente: Techandes Sas (CLI-02) | Servicio: Estación Workstation i7 | Duración: 3.0 | Costo: $135,000.00
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #11 | Finalizó intento de creación de reserva.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #12 | Reserva RES-04 cancelada (Cambio de cronograma del cliente).
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #12 | Finalizó intento de cancelación de reserva 'RES-04'.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 10: Reserva creada y cancelada exitosamente
+2026-11-24 20:11:26 | ERROR    | SoftwareFJ | Op #13 | Fallo al procesar reserva: No se puede procesar la reserva 'RES-04' porque está cancelada. | {'id_reserva': 'RES-04', 'estado_actual': 'CANCELADA'}
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #13 | Finalizó procesamiento de reserva 'RES-04'.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 11: Intento inválido de procesar reserva cancelada (RES-04)
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #14 | Reserva creada: [RES-05] Estado: PENDIENTE | Cliente: Techandes Sas (CLI-02) | Servicio: Arquitectura Cloud | Duración: 2.0 | Costo: $240,000.00
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Op #14 | Finalizó intento de creación de reserva.
+2026-11-24 20:11:26 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 12: Encadenamiento de excepciones en procesamiento
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #1 | Cliente registrado: [CLI-01] Laura Méndez (Particular) - laura.mendez@correo.com | Tel: 3104567890
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #1 | Finalizó intento de registro de cliente.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 1: Registro de cliente válido (particular)
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #2 | Cliente registrado: [CLI-02] Techandes Sas (Corporativo) - contacto@techandes.co | Tel: 6076543210
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #2 | Finalizó intento de registro de cliente.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 2: Registro de cliente válido (corporativo)
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 3: Intento de registro de cliente inválido (correo sin @/dominio)
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #3 | Servicio registrado: [SRV-SALA-1] Sala Ejecutiva A | Tarifa base: $80,000.00 | Disponible
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #3 | Finalizó intento de registro de servicio.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #4 | Servicio registrado: [SRV-EQ-1] Estación Workstation i7 | Tarifa base: $45,000.00 | Disponible
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #4 | Finalizó intento de registro de servicio.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #5 | Servicio registrado: [SRV-ASE-1] Arquitectura Cloud | Tarifa base: $120,000.00 | Disponible
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #5 | Finalizó intento de registro de servicio.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #6 | Servicio registrado: [SRV-SALA-2] Auditorio Principal | Tarifa base: $150,000.00 | No disponible
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #6 | Finalizó intento de registro de servicio.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 4: Creación correcta de servicios especializados
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 5: Creación incorrecta de servicio (tarifa inválida)
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 6: Polimorfismo y métodos sobrecargados de costo
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #7 | Reserva creada: [RES-01] Estado: PENDIENTE | Cliente: Laura Méndez (CLI-01) | Servicio: Sala Ejecutiva A | Duración: 4.0 | Costo: $361,760.00
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #7 | Finalizó intento de creación de reserva.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #8 | Reserva RES-01 procesada con éxito | Cliente: Laura Méndez | Servicio: Sala Ejecutiva A | Total: $361,760.00
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #8 | Finalizó procesamiento de reserva 'RES-01'.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 7: Reserva exitosa confirmada y procesada
+2026-11-24 20:16:21 | ERROR    | SoftwareFJ | Op #9 | Fallo al crear reserva: El servicio 'Auditorio Principal' [SRV-SALA-2] no está disponible para nuevas reservas. | {'id_reserva': 'RES-02', 'servicio_id': 'SRV-SALA-2'}
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #9 | Finalizó intento de creación de reserva.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 8: Reserva fallida (servicio no disponible)
+2026-11-24 20:16:21 | ERROR    | SoftwareFJ | Op #10 | Fallo al crear reserva: La duración de la reserva debe ser un número positivo mayor que cero. | {'duracion': 0}
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #10 | Finalizó intento de creación de reserva.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 9: Reserva fallida (duración inválida)
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #11 | Reserva creada: [RES-04] Estado: PENDIENTE | Cliente: Techandes Sas (CLI-02) | Servicio: Estación Workstation i7 | Duración: 3.0 | Costo: $135,000.00
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #11 | Finalizó intento de creación de reserva.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #12 | Reserva RES-04 cancelada (Cambio de cronograma del cliente).
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #12 | Finalizó intento de cancelación de reserva 'RES-04'.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 10: Reserva creada y cancelada exitosamente
+2026-11-24 20:16:21 | ERROR    | SoftwareFJ | Op #13 | Fallo al procesar reserva: No se puede procesar la reserva 'RES-04' porque está cancelada. | {'id_reserva': 'RES-04', 'estado_actual': 'CANCELADA'}
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #13 | Finalizó procesamiento de reserva 'RES-04'.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 11: Intento inválido de procesar reserva cancelada (RES-04)
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #14 | Reserva creada: [RES-05] Estado: PENDIENTE | Cliente: Techandes Sas (CLI-02) | Servicio: Arquitectura Cloud | Duración: 2.0 | Costo: $240,000.00
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #14 | Finalizó intento de creación de reserva.
+2026-11-24 20:16:21 | ERROR    | SoftwareFJ | Op #15 | Fallo al procesar reserva: Inconsistencia matemática al procesar la reserva 'RES-05'. | {'id_reserva': 'RES-05'}
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Op #15 | Finalizó procesamiento de reserva 'RES-05'.
+2026-11-24 20:16:21 | INFO     | SoftwareFJ | Bloque finally ejecutado para: Operación 12: Encadenamiento de excepciones en procesamiento
